@@ -1,0 +1,53 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- user_choose_Movie
+- user_choose_type_of_seat
+- user_entered_total_num_of_seat
+responses:
+  utter_greet:
+  - text: Hey!
+  utter_booking:
+  - text: Wanna book tickets?
+  utter_goodbye:
+  - text: Bye
+  utter_enjoy:
+  - text: Enjoy...
+  utter_display_MovieList:
+  - buttons:
+    - payload: Dhoom
+      title: Dhoom
+    - payload: ABCD
+      title: ABCD
+    - payload: Article 15
+      title: Article 15
+    text: Here it is Current shows...
+  utter_display_type_of_seat:
+  - buttons:
+    - payload: Gold
+      title: Gold
+    - payload: Silver
+      title: Silver
+    - payload: Lower
+      title: Lower
+    text: Choose type of seat...
+  utter_ask_for_num_of_seat:
+  - text: How many tickets?
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- utter_greet
+- utter_booking
+- utter_display_MovieList
+- utter_display_type_of_seat
+- utter_ask_for_num_of_seat
+- send_total
+- utter_goodbye
+- utter_iamabot
+- utter_enjoy
